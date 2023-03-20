@@ -1,0 +1,388 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNER3akXIx+rg6BNd2SlBdV",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/grl051/aulas-programa-o/blob/main/Aula%20004%20lista%20e%20la%C3%A7os\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "blrx5Q5SADJY"
+      },
+      "outputs": [],
+      "source": [
+        "num = (42,2,3,4,5,6)\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(num)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "qkn31YUqBJ72",
+        "outputId": "6ba07a0d-0e69-4df9-b3dd-ddb1a77aa7af"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "6"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "num[3]"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "CcJ-_9EQCUOr",
+        "outputId": "043afc2e-51ba-432a-f6ff-f941535776f8"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "4"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 11
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alunos = ['mariana','josé','bruno','juan']"
+      ],
+      "metadata": {
+        "id": "PGbhpH3CDL0d"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "len(alunos)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "uXR8P0u-Dq9N",
+        "outputId": "e572c12b-7a07-4a36-b4d9-76da69901abc"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "4"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 14
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alunos[3] = 'henrique'\n",
+        "alunos.append('2')\n",
+        "alunos"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "60bswYJrD_Zt",
+        "outputId": "5e3964cd-6097-45ca-ec50-cf1a680600a7"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['mariana', 'josé', 'bruno', 'henrique', '2', '2']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 21
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alunos.append(input('digite um nome'))"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "QyRmYePGFJYt",
+        "outputId": "d2fadee2-41db-4a0e-f07f-725cc3e89137"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "name": "stdout",
+          "output_type": "stream",
+          "text": [
+            "digite um nomejuan\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alunos"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "k_01oC4jGS45",
+        "outputId": "a48bdd57-c1a3-4dc1-e7f1-f8862e14e153"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['mariana', 'josé', 'bruno', 'henrique', '2', '2', 'juan']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 23
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alunos.remove('2')\n",
+        "alunos"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "z9EwEOc6GWMx",
+        "outputId": "d59d1955-ba39-4873-e1d0-e7441826a751"
+      },
+      "execution_count": null,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['mariana', 'josé', 'bruno', 'henrique', 'juan']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 25
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "if 'juan' in alunos:\n",
+        "  print('tem SIM')\n",
+        "else:\n",
+        "  print('tem NÃO')\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "kSCek5b6M5IB",
+        "outputId": "f143541f-2c2c-4adc-a8bd-558be177b9c0"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "tem SIM\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "nome = input('digite o nome: ')\n",
+        "if nome in alunos:\n",
+        "  print('tem', nome)\n",
+        "else:\n",
+        "    print('Não tem', nome)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "H2wHlwI6NksF",
+        "outputId": "171ad19a-f0f3-4d66-c291-4509fa1abda4"
+      },
+      "execution_count": 40,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "digite o nome: gab\n",
+            "Não tem gab\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "alunos"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "u_jrH4kfQ7kA",
+        "outputId": "cea325c8-aa00-4899-db32-d0790383b621"
+      },
+      "execution_count": 37,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['mariana', 'josé', 'bruno', 'henrique', 'juan']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 37
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "numeros = []\n",
+        "for num in range(15):\n",
+        "    numeros.append(num)"
+      ],
+      "metadata": {
+        "id": "t36s8YpCRZLX"
+      },
+      "execution_count": 47,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "dobro = []\n",
+        "for num in numeros:\n",
+        "  dobro.append(numeros[num]*2)\n",
+        "dobro"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "JF20ihc6ViIj",
+        "outputId": "a22ba0aa-5889-462e-87fd-6698c4f2c128"
+      },
+      "execution_count": 49,
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "[0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26, 28]"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 49
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for num in numeros:\n",
+        "  if numeros[num]%2 == 0:\n",
+        "    print(numeros[num])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GvkCGMoSX0V9",
+        "outputId": "a81e3a2f-74f8-4d4e-cd1c-6929b587c934"
+      },
+      "execution_count": 55,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "0\n",
+            "2\n",
+            "4\n",
+            "6\n",
+            "8\n",
+            "10\n",
+            "12\n",
+            "14\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
